@@ -1,5 +1,15 @@
--- Module Main exposing (..)
+module Main exposing (..)
 
 import Html exposing (text)
 
-main = text "String"
+ask : String -> String
+ask thing =
+  "is there " ++ thing ++ "?"
+
+place : String -> String
+place names =
+  "Place" ++ names
+
+main = text
+  <| place
+  <| ask "a fish"
